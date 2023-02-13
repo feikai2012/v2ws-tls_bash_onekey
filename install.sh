@@ -556,8 +556,8 @@ old_config_exist_check() {
 }
 
 nginx_conf_add() {
-    touch ${nginx_conf_dir}/v2ray.conf
-    cat >${nginx_conf_dir}/v2ray.conf <<EOF
+    touch ${nginx_conf}/${domain}.conf
+    cat >${nginx_conf}/${domain} <<EOF
     server {
         listen 443 ssl http2;
         listen [::]:443 http2;
